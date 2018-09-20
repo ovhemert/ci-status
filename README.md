@@ -20,6 +20,14 @@ See the supported services list.
 
 ## Installation
 
+To use globally from command line:
+
+```bash
+npm install -g ci-status
+```
+
+To include as a library in your project:
+
 ```bash
 npm install ci-status
 ```
