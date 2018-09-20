@@ -1,5 +1,7 @@
 'use strict'
 
+const { URL } = require('url')
+
 const feed = require('./feed')
 const querystring = require('querystring')
 
