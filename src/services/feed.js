@@ -35,7 +35,7 @@ async function getProjects (url, { service, owner, repo }) {
 }
 
 async function getXml (url) {
-  const xml = await got(url).then(res => res.body)
+  const xml = await got.get(url).then(res => res.body)
   return xml
 }
 
