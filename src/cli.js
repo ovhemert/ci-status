@@ -37,6 +37,22 @@ async function main () {
     .version(pkg.version)
 
   program
+    .command('appveyor')
+    .option('-o, --owner <owner>', 'Project owner')
+    .option('-r, --repo <repo>', 'Project repository')
+    .action(async ({ owner, repo }) => {
+      try {
+        if (!owner) { throw Error('You need to specify an owner.') }
+        if (!repo) { throw Error('You need to specify an repo.') }
+        const projects = await services.appveyor.getProjects({ owner, repo })
+        outputConsole(projects)
+      } catch (error) {
+        const msg = `${chalk.red(error.message)}\n\n${chalk.yellow('For more help type: ci-status appveyor --help')}`
+        console.log(msg)
+      }
+    })
+
+  program
     .command('circleci')
     .option('-o, --owner <owner>', 'Project owner')
     .option('-r, --repo <repo>', 'Project repository')

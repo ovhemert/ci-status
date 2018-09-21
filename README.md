@@ -46,7 +46,7 @@ See the [API.md](./docs/API.md) file for details.
 
 This support list is a work-in-progress. At the moment, only open-source repos are supported.
 
-- [ ] Appveyor
+- [x] Appveyor
 - [ ] Buddybuild
 - [x] CircleCI
 - [ ] CruiseControl
