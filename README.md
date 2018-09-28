@@ -54,7 +54,6 @@ This support list is a work-in-progress. At the moment, only open-source repos a
 - [ ] Hudson
 - [ ] Jenkins
 - [ ] Semaphore
-- [ ] SnapCI
 - [ ] TeamCity
 - [x] Travis
 
