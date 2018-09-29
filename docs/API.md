@@ -34,7 +34,7 @@ Type: `String` *(required)*
 
 Example: `116237544ebea73f9a27ffebadb3961859`
 
-API token (preferred) or the password of the user
+API token (preferred) or the password of the user.
 
 ### url
 
@@ -50,4 +50,47 @@ Type: `String` *(required)*
 
 Example: `ovhemert`
 
-User account that has permissions to view the projects
+User account that has permissions to view the projects.
+
+## Travis CI
+
+Example
+
+``` js
+const projects = await cis.travis.getProjects({
+  owner: 'ovhemert',
+  repo: 'ci-status'
+})
+```
+
+### branch
+
+Type: `String` *(optional)*
+
+Example: `production`
+
+Show build status for specific branch.
+
+### owner
+
+Type: `String` *(required)*
+
+Example: `ovhemert`
+
+User account the repositories belong to.
+
+### repo
+
+Type: `String` *(optional)*
+
+Example: `ci-status`
+
+The name of the repository your interested in.
+
+### token
+
+Type: `String` *(optional)*
+
+Example: `116237544ebea73f9a27ffe`
+
+API token of the user. To show private projects, you need to specify this property.

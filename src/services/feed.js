@@ -38,6 +38,9 @@ async function getXml (url, { auth }) {
     const base64data = Buffer.from(`${auth.user}:${auth.pass}`).toString('base64')
     options.headers['Authorization'] = `Basic ${base64data}`
   }
+  if (auth && auth.token) {
+    options.headers['Authorization'] = `Token ${auth.token}`
+  }
   const xml = await got.get(url, options).then(res => res.body)
   return xml
 }

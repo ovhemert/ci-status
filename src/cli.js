@@ -70,9 +70,9 @@ async function main () {
   program
     .command('jenkins')
     .option('-p, --project <project>', 'Project name')
+    .option('-r, --url <url>', 'The host url to connect to (ex. http://localhost:8080/)')
     .option('-t, --token <token>', 'API token (preferred) / password of the user for authentication')
     .option('-u, --user <user>', 'User account name to connect with')
-    .option('-r, --url <url>', 'The host url to connect to (ex. http://localhost:8080/)')
     .action(async ({ url, project, token, user }) => {
       try {
         if (!url || !token || !user) { throw Error('You need to specify --url, --token and --user') }
@@ -89,10 +89,11 @@ async function main () {
     .option('-b, --branch <branch>', 'Specific branch')
     .option('-o, --owner <owner>', 'Project owner')
     .option('-r, --repo <repo>', 'Project repository')
-    .action(async ({ owner, repo, branch }) => {
+    .option('-t, --token <token>', 'API token of the user for authentication')
+    .action(async ({ branch, owner, repo, token }) => {
       try {
         if (!owner) { throw Error('You need to specify an owner.') }
-        const projects = await services.travis.getProjects({ owner, repo, branch })
+        const projects = await services.travis.getProjects({ branch, owner, repo, token })
         outputConsole(projects)
       } catch (error) {
         const msg = `${chalk.red(error.message)}\n\n${chalk.yellow('For more help type: ci-status travis --help')}`
