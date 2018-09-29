@@ -25,7 +25,7 @@ test('gets single project', async t => {
     const body = `<Projects>\n${samples.PROJECTS_XML[0]}\n</Projects>`
     return { body }
   })
-  const projects = await travis.getProjects({ owner: 'ovhemert', repo: 'ci-status', branch: 'master' })
+  const projects = await travis.getProjects({ owner: 'ovhemert', repo: 'ci-status', branch: 'master', 'token': 'blablabla' })
   sgot.restore()
 
   t.ok(projects.length > 0)
