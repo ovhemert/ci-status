@@ -8,6 +8,33 @@ To include the library in your project, use:
 const cis = require('ci-status')
 ```
 
+## Appveyor
+
+Example
+
+``` js
+const projects = await cis.appveyor.getProjects({
+  owner: 'ovhemert',
+  repo: 'ci-status'
+})
+```
+
+### owner
+
+Type: `String` *(required)*
+
+Example: `ovhemert`
+
+User account the repositories belong to.
+
+### repo
+
+Type: `String` *(required)*
+
+Example: `ci-status`
+
+The name of the repository your interested in.
+
 ## Jenkins
 
 Example
