@@ -13,6 +13,8 @@
 CI-Status displays the build status of projects on a continuous integration server in the console.
 It's also possible to include the library into your own project.
 
+![Screenshot](assets/images/screenshot.png)
+
 ## Requirements
 
 A project that's building on a supported continuous integration server.
@@ -31,7 +33,7 @@ This support list is a work-in-progress.
 - [x] Jenkins
 - [ ] Semaphore
 - [ ] TeamCity
-- [x] Travis
+- [x] Travis (travis-ci.com)
 
 *Missing something? Suggest or contribute your own!*
 
