@@ -68,6 +68,23 @@ async function main () {
     })
 
   program
+    .command('jenkins')
+    .option('-p, --project <project>', 'Project name')
+    .option('-t, --token <token>', 'API token (preferred) / password of the user for authentication')
+    .option('-u, --user <user>', 'User account name to connect with')
+    .option('-r, --url <url>', 'The host url to connect to (ex. http://localhost:8080/)')
+    .action(async ({ url, project, token, user }) => {
+      try {
+        if (!url || !token || !user) { throw Error('You need to specify --url, --token and --user') }
+        const projects = await services.jenkins.getProjects({ url, project, token, user })
+        outputConsole(projects)
+      } catch (error) {
+        const msg = `${chalk.red(error.message)}\n\n${chalk.yellow('For more help type: ci-status jenkins --help')}`
+        console.log(msg)
+      }
+    })
+
+  program
     .command('travis')
     .option('-b, --branch <branch>', 'Specific branch')
     .option('-o, --owner <owner>', 'Project owner')

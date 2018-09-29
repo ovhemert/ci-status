@@ -18,6 +18,23 @@ It's also possible to include the library into your own project.
 A project that's building on a supported continuous integration server.
 See the supported services list.
 
+## Supported Services
+
+This support list is a work-in-progress.
+
+- [x] Appveyor
+- [ ] Buddybuild
+- [x] CircleCI
+- [ ] CruiseControl
+- [ ] GreenhouseCI
+- [ ] Hudson
+- [x] Jenkins
+- [ ] Semaphore
+- [ ] TeamCity
+- [x] Travis
+
+*Missing something? Suggest or contribute your own!*
+
 ## Installation
 
 To use globally from command line:
@@ -41,23 +58,6 @@ ci-status travis -o ovhemert
 ## API
 
 See the [API.md](./docs/API.md) file for details.
-
-## Supported Services
-
-This support list is a work-in-progress. At the moment, only open-source repos are supported.
-
-- [x] Appveyor
-- [ ] Buddybuild
-- [x] CircleCI
-- [ ] CruiseControl
-- [ ] GreenhouseCI
-- [ ] Hudson
-- [ ] Jenkins
-- [ ] Semaphore
-- [ ] TeamCity
-- [x] Travis
-
-*Missing something? Suggest or contribute your own!*
 
 ## Maintainers
 

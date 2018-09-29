@@ -13,8 +13,8 @@ function parseXml (xml) {
   })
 }
 
-async function getProjects (url, { service, owner, repo }) {
-  const xml = await getXml(url)
+async function getProjects (url, { auth, service }) {
+  const xml = await getXml(url, { auth })
   const { projects } = await parseXml(xml)
   const items = projects.project || []
   return items.map(project => {
@@ -27,15 +27,18 @@ async function getProjects (url, { service, owner, repo }) {
       nextBuildTime: project.attr.nextBuildTime || null,
       webUrl: project.attr.webUrl,
       feedUrl: url,
-      service: service,
-      owner: owner,
-      repo: repo
+      service: service
     }
   })
 }
 
-async function getXml (url) {
-  const xml = await got.get(url).then(res => res.body)
+async function getXml (url, { auth }) {
+  let options = { headers: {} }
+  if (auth && auth.user && auth.pass) {
+    const base64data = Buffer.from(`${auth.user}:${auth.pass}`).toString('base64')
+    options.headers['Authorization'] = `Basic ${base64data}`
+  }
+  const xml = await got.get(url, options).then(res => res.body)
   return xml
 }
 
