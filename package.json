@@ -1,6 +1,6 @@
 {
   "name": "ci-status",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "ci-status",
   "bin": {
     "ci-status": "src/cli.js"
