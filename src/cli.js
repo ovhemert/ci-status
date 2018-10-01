@@ -38,8 +38,8 @@ async function main () {
 
   program
     .command('appveyor')
-    .option('-o, --owner <owner>', 'Project owner')
-    .option('-r, --repo <repo>', 'Project repository')
+    .option('-o, --owner <owner>', 'User account the repositories belong to')
+    .option('-r, --repo <repo>', 'The name of the repository your interested in')
     .action(async ({ owner, repo }) => {
       try {
         if (!owner) { throw Error('You need to specify an owner.') }
@@ -69,7 +69,7 @@ async function main () {
 
   program
     .command('jenkins')
-    .option('-p, --project <project>', 'Project name')
+    .option('-p, --project <project>', 'The name of the project your interested in')
     .option('-r, --url <url>', 'The host url to connect to (ex. http://localhost:8080/)')
     .option('-t, --token <token>', 'API token (preferred) / password of the user for authentication')
     .option('-u, --user <user>', 'User account name to connect with')

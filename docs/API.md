@@ -8,9 +8,78 @@ To include the library in your project, use:
 const cis = require('ci-status')
 ```
 
-## Appveyor
+## Generic
 
-Example
+### Project
+
+The `getProjects` function of each service always returns an array of projects. The project object follows the attribute names in the [Multiple Project Summary Reporting Standard](https://github.com/erikdoe/ccmenu/wiki/Multiple-Project-Summary-Reporting-Standard) .
+
+Example:
+
+```js
+  [
+    name: 'ci-status',
+    activity: 'Sleeping',
+    lastBuildStatus: 'Success',
+    lastBuildLabel: '3',
+    lastBuildTime: '2018-09-20T08:26:43.000Z',
+    nextBuildTime: null,
+    webUrl: 'https://travis-ci.com/ovhemert/ci-status'
+  ]
+````
+
+#### name
+
+Type: `String` *(required)*
+
+The name of the project.
+
+
+#### activity
+
+Type: `String` *(required)*
+
+Enum: `Sleeping`, `Building`, `CheckingModifications`
+
+The current state of the project.
+
+#### lastBuildStatus
+
+Type: `String` *(required)*
+
+Enum: `Success`, `Failure`, `Exception`, `Unknown`
+
+A brief description of the last build.
+
+#### lastBuildLabel
+
+Type: `String` *(optional)*
+
+A referential name for the last build.
+
+#### lastBuildTime
+
+Type: `String (date/time)` *(required)*
+
+When the last build occurred.
+
+#### nextBuildTime
+
+Type: `String (date/time)` *(optional)*
+
+When the next build is scheduled to occur (or when the next check to see whether a build should be performed is scheduled to occur).
+
+#### webUrl
+
+Type: `String (url)` *(required)*
+
+URL for where more detail can be found about the project.
+
+## AppVeyor
+
+The `appveyor` object exposes functions related to the [AppVeyor](https://www.appveyor.com/) service.
+
+### getProjects
 
 ``` js
 const projects = await cis.appveyor.getProjects({
@@ -19,7 +88,7 @@ const projects = await cis.appveyor.getProjects({
 })
 ```
 
-### owner
+#### owner
 
 Type: `String` *(required)*
 
@@ -27,7 +96,7 @@ Example: `ovhemert`
 
 User account the repositories belong to.
 
-### repo
+#### repo
 
 Type: `String` *(required)*
 
@@ -37,7 +106,9 @@ The name of the repository your interested in.
 
 ## Jenkins
 
-Example
+The `jenkins` object exposes functions related to the [Jenkins](https://jenkins.io/) service.
+
+### getProjects
 
 ``` js
 const projects = await cis.jenkins.getProjects({
@@ -47,7 +118,7 @@ const projects = await cis.jenkins.getProjects({
 })
 ```
 
-### project
+#### project
 
 Type: `String` *(optional)*
 
@@ -55,7 +126,7 @@ Example: `ci-status`
 
 The name of the project your interested in. By default, Jenkins will return all available projects. This option filters the list and returns only the project with the specified name.
 
-### token
+#### token
 
 Type: `String` *(required)*
 
@@ -63,7 +134,7 @@ Example: `116237544ebea73f9a27ffebadb3961859`
 
 API token (preferred) or the password of the user.
 
-### url
+#### url
 
 Type: `String` *(required)*
 
@@ -71,7 +142,7 @@ Example: `http://localhost:8080/`
 
 The full host url to connect to.
 
-### user
+#### user
 
 Type: `String` *(required)*
 
@@ -81,7 +152,9 @@ User account that has permissions to view the projects.
 
 ## Travis CI
 
-Example
+The `travis` object exposes functions related to the [Travis CI](https://travis-ci.com/) service.
+
+### getProjects
 
 ``` js
 const projects = await cis.travis.getProjects({
@@ -90,7 +163,7 @@ const projects = await cis.travis.getProjects({
 })
 ```
 
-### branch
+#### branch
 
 Type: `String` *(optional)*
 
@@ -98,7 +171,7 @@ Example: `production`
 
 Show build status for specific branch.
 
-### owner
+#### owner
 
 Type: `String` *(required)*
 
@@ -106,7 +179,7 @@ Example: `ovhemert`
 
 User account the repositories belong to.
 
-### repo
+#### repo
 
 Type: `String` *(optional)*
 
@@ -114,7 +187,7 @@ Example: `ci-status`
 
 The name of the repository your interested in.
 
-### token
+#### token
 
 Type: `String` *(optional)*
 

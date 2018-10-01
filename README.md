@@ -42,24 +42,29 @@ This support list is a work-in-progress.
 To use globally from command line:
 
 ```bash
-npm install -g ci-status
+$ npm install -g ci-status
 ```
 
 To include as a library in your project:
 
 ```bash
-npm install ci-status
+$ npm install ci-status
 ```
 
 ## Usage
 
+Example:
+
 ```bash
-ci-status travis -o ovhemert
+$ ci-status travis -o ovhemert
 ```
+
+For a detailed description of all the commands and options available, see the [CLI](./docs/CLI.md) documentation.
 
 ## API
 
-See the [API.md](./docs/API.md) file for details.
+Want to use `ci-status` as a library in your project?
+See the [API](./docs/API.md) documentation for details.
 
 ## Maintainers
 
