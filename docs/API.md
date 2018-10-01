@@ -17,15 +17,15 @@ The `getProjects` function of each service always returns an array of projects. 
 Example:
 
 ```js
-  [
-    name: 'ci-status',
-    activity: 'Sleeping',
-    lastBuildStatus: 'Success',
-    lastBuildLabel: '3',
-    lastBuildTime: '2018-09-20T08:26:43.000Z',
-    nextBuildTime: null,
-    webUrl: 'https://travis-ci.com/ovhemert/ci-status'
-  ]
+{
+  name: 'ci-status',
+  activity: 'Sleeping',
+  lastBuildStatus: 'Success',
+  lastBuildLabel: '3',
+  lastBuildTime: '2018-09-20T08:26:43.000Z',
+  nextBuildTime: null,
+  webUrl: 'https://travis-ci.com/ovhemert/ci-status'
+}
 ````
 
 #### name
@@ -81,12 +81,16 @@ The `appveyor` object exposes functions related to the [AppVeyor](https://www.ap
 
 ### getProjects
 
+Example:
+
 ``` js
 const projects = await cis.appveyor.getProjects({
   owner: 'ovhemert',
   repo: 'ci-status'
 })
 ```
+
+Returns an array of projects. See [`Project`](#project).
 
 #### owner
 
@@ -110,6 +114,8 @@ The `jenkins` object exposes functions related to the [Jenkins](https://jenkins.
 
 ### getProjects
 
+Example:
+
 ``` js
 const projects = await cis.jenkins.getProjects({
   url: 'http://localhost:8080/',
@@ -117,6 +123,8 @@ const projects = await cis.jenkins.getProjects({
   token: '116237544ebea73f9a27ffebadb3961859'
 })
 ```
+
+Returns an array of projects. See [`Project`](#project).
 
 #### project
 
@@ -156,12 +164,16 @@ The `travis` object exposes functions related to the [Travis CI](https://travis-
 
 ### getProjects
 
+Example:
+
 ``` js
 const projects = await cis.travis.getProjects({
   owner: 'ovhemert',
   repo: 'ci-status'
 })
 ```
+
+Returns an array of projects. See [`Project`](#project).
 
 #### branch
 
