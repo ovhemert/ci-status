@@ -41,8 +41,7 @@ function transformData (data, { name, region }) {
 
 async function getProjects ({ name, region }) {
   const cpClient = new AWS.CodePipeline({ region: region })
-  const json = await cpClient.getPipelineState({ name: name }).promise()
-  const data = JSON.parse(json)
+  const data = await cpClient.getPipelineState({ name: name }).promise()
 
   const projects = [transformData(data, { name: name, region: region })] // only supports a single project
   return projects

@@ -17,7 +17,7 @@ function hasProperties (testObject, propArray) {
 
 test('gets single project', async t => {
   t.plan(2)
-  awsMock.mock('CodePipeline', 'getPipelineState', Promise.resolve(`${JSON.stringify(samples.CODE_PIPELINE_JSON[0])}`))
+  awsMock.mock('CodePipeline', 'getPipelineState', Promise.resolve(samples.CODE_PIPELINE_JSON[0]))
 
   const projects = await codepipeline.getProjects({ name: 'testproject-Pipeline', region: 'us-east-1' })
   awsMock.restore()
