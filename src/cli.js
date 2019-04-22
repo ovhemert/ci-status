@@ -101,6 +101,22 @@ async function main () {
       }
     })
 
+  program
+    .command('codepipeline')
+    .option('-n, --name <name>', 'The name of the pipeline you\'re interested in')
+    .option('-r, --region <region>', 'The AWS region in which your pipeline resides')
+    .action(async ({ name, region }) => {
+      try {
+        if (!name) { throw Error('You need to specify a name.') }
+        if (!region) { throw Error('You need to specify a region.') }
+        const projects = await services.codepipeline.getProjects({ name, region })
+        outputConsole(projects)
+      } catch (error) {
+        const msg = `${chalk.red(error.message)}\n\n${chalk.yellow('For more help type: ci-status codepipeline --help')}`
+        console.log(msg)
+      }
+    })
+
   program.parse(process.argv)
 
   if (!process.argv.slice(2).length) {

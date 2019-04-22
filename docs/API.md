@@ -206,3 +206,36 @@ Type: `String` *(optional)*
 Example: `116237544ebea73f9a27ffe`
 
 API token of the user. To show private projects, you need to specify this property.
+
+## AWS Codepipeline
+
+The `codepipeline` object exposes functions related to the [AWS Codepipeline](https://aws.amazon.com/codepipeline/) service.
+
+### getProjects
+
+Example:
+
+``` js
+const projects = await cis.codepipeline.getProjects({
+  name: 'test-project-pipeline',
+  region: 'us-east-1'
+})
+```
+
+Returns an array of projects. See [`Project`](#project).
+
+#### name
+
+Type: `String` *(required)*
+
+Example: `test-project-pipeline`
+
+The name of the pipeline you're interested in.
+
+#### region
+
+Type: `String` *(required)*
+
+Example: `us-east-1`
+
+The AWS region in which your pipeline resides.

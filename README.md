@@ -32,6 +32,7 @@ This support list is a work-in-progress.
 - [ ] Semaphore
 - [ ] TeamCity
 - [x] Travis (travis-ci.com)
+- [x] AWS CodePipeline
 
 *Missing something? Suggest or contribute your own!*
 
