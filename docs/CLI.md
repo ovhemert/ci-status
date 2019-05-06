@@ -47,3 +47,11 @@ $ ci-status -h
 | -r | --repo &lt;repo&gt; | The name of the repository your interested in |
 | -t | --token &lt;token&gt; | API token (preferred) / password of the user for authentication |
 | -h | --help | Output usage information |
+
+### AWS Codepipeline
+
+| Short command | Full command | Description |
+| ------------- | ------------ |-------------|
+| -n | --name &lt;name&gt; | The name of the pipeline you're interested in |
+| -r | --region &lt;region&gt; | The AWS region in which your pipeline resides |
+| -h | --help | Output usage information |
