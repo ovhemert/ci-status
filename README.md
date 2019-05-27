@@ -22,17 +22,17 @@ See the supported services list.
 
 This support list is a work-in-progress.
 
--  [x] Appveyor
--  [x] AWS CodePipeline
--  [ ] Buddybuild
--  [x] CircleCI
--  [ ] CruiseControl
--  [ ] GreenhouseCI
--  [ ] Hudson
--  [x] Jenkins
--  [ ] Semaphore
--  [ ] TeamCity
--  [x] Travis (travis-ci.com)
+-   [x] Appveyor
+-   [x] AWS CodePipeline
+-   [ ] Buddybuild
+-   [x] CircleCI
+-   [ ] CruiseControl
+-   [ ] GreenhouseCI
+-   [ ] Hudson
+-   [x] Jenkins
+-   [ ] Semaphore
+-   [ ] TeamCity
+-   [x] Travis (travis-ci.com)
 
 *Missing something? Suggest or contribute your own!*
 
