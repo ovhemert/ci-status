@@ -21,7 +21,7 @@
     "url": "https://github.com/ovhemert/ci-status/issues"
   },
   "homepage": "https://github.com/ovhemert/ci-status#readme",
-  "author": "Osmond van Hemert <osmond@vanhemert.nu>",
+  "author": "Osmond van Hemert <hello@ovhemert.dev> (https://ovhemert.dev)",
   "license": "MIT",
   "engines": {
     "node": ">=8.9.0"

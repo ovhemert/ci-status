@@ -22,17 +22,17 @@ See the supported services list.
 
 This support list is a work-in-progress.
 
-- [x] Appveyor
-- [x] AWS CodePipeline
-- [ ] Buddybuild
-- [x] CircleCI
-- [ ] CruiseControl
-- [ ] GreenhouseCI
-- [ ] Hudson
-- [x] Jenkins
-- [ ] Semaphore
-- [ ] TeamCity
-- [x] Travis (travis-ci.com)
+-  [x] Appveyor
+-  [x] AWS CodePipeline
+-  [ ] Buddybuild
+-  [x] CircleCI
+-  [ ] CruiseControl
+-  [ ] GreenhouseCI
+-  [ ] Hudson
+-  [x] Jenkins
+-  [ ] Semaphore
+-  [ ] TeamCity
+-  [x] Travis (travis-ci.com)
 
 *Missing something? Suggest or contribute your own!*
 
@@ -68,12 +68,14 @@ See the [API](./docs/API.md) documentation for details.
 ## Maintainers
 
 Osmond van Hemert
-[![Github](https://img.shields.io/badge/-website.svg?style=social&logoColor=333&logo=github)](https://github.com/ovhemert/about)
-[![Web](https://img.shields.io/badge/-website.svg?style=social&logoColor=333&logo=nextdoor)](https://www.osmondvanhemert.nl)
+[![Github](https://img.shields.io/badge/-website.svg?style=social&logoColor=333&logo=github)](https://github.com/ovhemert)
+[![Web](https://img.shields.io/badge/-website.svg?style=social&logoColor=333&logo=nextdoor)](https://ovhemert.dev)
 
 ## Contributing
 
-See the [CONTRIBUTING](./docs/CONTRIBUTING.md) file for details.
+If you would like to help out with some code, check the [details](./docs/CONTRIBUTING.md).
+
+Not a coder, but still want to support? Have a look at the options available to [donate](https://ovhemert.dev/donate).
 
 ## License
 
