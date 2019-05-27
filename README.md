@@ -22,11 +22,11 @@ See the supported services list.
 
 This support list is a work-in-progress.
 
--  Appveyor
--  AWS CodePipeline
--  CircleCI
--  Jenkins
--  Travis (travis-ci.com)
+-   Appveyor
+-   AWS CodePipeline
+-   CircleCI
+-   Jenkins
+-   Travis (travis-ci.com)
 
 *Missing something? Suggest or contribute your own!*
 
