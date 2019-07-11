@@ -29,7 +29,7 @@
   "devDependencies": {
     "aws-sdk-mock": "^4.4.0",
     "sinon": "^7.2.5",
-    "standard": "^12.0.1",
+    "standard": "^13.0.1",
     "tap": "^14.1.11"
   },
   "dependencies": {
