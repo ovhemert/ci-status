@@ -8,7 +8,7 @@ const feed = require('../src/services/feed')
 
 test('throws on malformed xml', async t => {
   t.plan(1)
-  let sgot = sinon.stub(got, 'get').callsFake(async url => {
+  const sgot = sinon.stub(got, 'get').callsFake(async url => {
     const body = `<Projects>yo</invalid>mama</Projects>`
     return { body }
   })
@@ -19,7 +19,7 @@ test('throws on malformed xml', async t => {
 
 test('handles xml without projects', async t => {
   t.plan(1)
-  let sgot = sinon.stub(got, 'get').callsFake(async url => {
+  const sgot = sinon.stub(got, 'get').callsFake(async url => {
     const body = `<Projects />`
     return { body }
   })

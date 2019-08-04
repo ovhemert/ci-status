@@ -8,7 +8,7 @@
 const AWS = require('aws-sdk')
 
 function getCurrentState (data) {
-  let state = { activity: 'Sleeping', lastBuildStatus: 'Unknown' }
+  const state = { activity: 'Sleeping', lastBuildStatus: 'Unknown' }
 
   // check each stage in order, get stage name and status from first one
   //  whose status is not 'Succeeded' or from the last stage in the pipeline
@@ -24,7 +24,7 @@ function getCurrentState (data) {
   return state
 }
 function transformData (data, { name, region }) {
-  let { activity, lastBuildStatus } = getCurrentState(data)
+  const { activity, lastBuildStatus } = getCurrentState(data)
 
   return {
     name: name,

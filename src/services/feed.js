@@ -33,7 +33,7 @@ async function getProjects (url, { auth, service }) {
 }
 
 async function getXml (url, { auth }) {
-  let options = { headers: {} }
+  const options = { headers: {} }
   if (auth && auth.user && auth.pass) {
     const base64data = Buffer.from(`${auth.user}:${auth.pass}`).toString('base64')
     options.headers['Authorization'] = `Basic ${base64data}`

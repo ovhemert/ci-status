@@ -9,7 +9,7 @@ const circleci = require('../src/services/circleci')
 
 test('gets owner projects', async t => {
   t.plan(1)
-  let sgot = sinon.stub(got, 'get').callsFake(async url => {
+  const sgot = sinon.stub(got, 'get').callsFake(async url => {
     const body = `<Projects>\n${samples.PROJECTS_XML.join('\n')}\n</Projects>`
     return { body }
   })
@@ -21,7 +21,7 @@ test('gets owner projects', async t => {
 test('gets single project', async t => {
   t.plan(1)
 
-  let sgot = sinon.stub(got, 'get').callsFake(async url => {
+  const sgot = sinon.stub(got, 'get').callsFake(async url => {
     const body = `<Projects>\n${samples.PROJECTS_XML[0]}\n</Projects>`
     return { body }
   })

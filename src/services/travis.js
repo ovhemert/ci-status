@@ -7,9 +7,9 @@ const querystring = require('querystring')
 
 async function getProjects ({ branch, owner, repo, token }) {
   const service = 'travis'
-  let url = new URL(`/repos/${owner}`, `https://api.travis-ci.com/`)
+  const url = new URL(`/repos/${owner}`, `https://api.travis-ci.com/`)
   url.pathname += (repo) ? `/${repo}/cc.xml` : `.xml`
-  let qs = {}
+  const qs = {}
   if (branch) { qs.branch = branch }
   const auth = (token) ? { token } : null
   url.search = querystring.stringify(qs)

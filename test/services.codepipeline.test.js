@@ -9,7 +9,7 @@ const codepipeline = require('../src/services/codepipeline')
 function hasProperties (testObject, propArray) {
   let propsResult = true
   propArray.every((prop) => {
-    propsResult = testObject.hasOwnProperty(prop)
+    propsResult = Object.prototype.hasOwnProperty.call(testObject, prop)
     return propsResult
   })
   return propsResult
@@ -27,7 +27,7 @@ test('gets single project', async t => {
 
   // check that project output conforms to project object specification
   let result = true
-  const requiredProperties = [ 'name', 'activity', 'lastBuildStatus', 'lastBuildLabel', 'lastBuildTime', 'nextBuildTime', 'webUrl' ]
+  const requiredProperties = ['name', 'activity', 'lastBuildStatus', 'lastBuildLabel', 'lastBuildTime', 'nextBuildTime', 'webUrl']
   projects.every((project) => {
     result = hasProperties(project, requiredProperties)
     return result
