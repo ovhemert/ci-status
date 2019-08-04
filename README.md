@@ -1,7 +1,6 @@
 # CI-Status
 
 [![Travis](https://img.shields.io/travis/com/ovhemert/ci-status.svg?branch=master&logo=travis)](https://travis-ci.com/ovhemert/ci-status)
-[![AppVeyor](https://img.shields.io/appveyor/ci/ovhemert/ci-status.svg?logo=appveyor)](https://ci.appveyor.com/project/ovhemert/ci-status)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/39e011f864c94544bb2535a531c4dd68)](https://www.codacy.com/app/ovhemert/ci-status?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ovhemert/ci-status&amp;utm_campaign=Badge_Grade)
 [![Known Vulnerabilities](https://snyk.io/test/npm/ci-status/badge.svg)](https://snyk.io/test/npm/ci-status)
 [![Coverage Status](https://coveralls.io/repos/github/ovhemert/ci-status/badge.svg?branch=master)](https://coveralls.io/github/ovhemert/ci-status?branch=master)
