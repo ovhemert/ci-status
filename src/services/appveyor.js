@@ -37,7 +37,7 @@ function transformData (item, { url, service, owner, repo }) {
 async function getProjects ({ owner, repo }) {
   const service = 'appveyor'
 
-  const url = new URL(`/api/projects/${owner}/${repo}`, `https://ci.appveyor.com/`)
+  const url = new URL(`/api/projects/${owner}/${repo}`, 'https://ci.appveyor.com/')
   const json = await got.get(url.href).then(res => res.body)
   const data = JSON.parse(json)
 
