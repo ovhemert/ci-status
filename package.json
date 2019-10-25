@@ -30,13 +30,13 @@
     "aws-sdk-mock": "^4.5.0",
     "sinon": "^7.5.0",
     "standard": "^14.3.1",
-    "tap": "^14.6.5"
+    "tap": "^14.8.2"
   },
   "dependencies": {
-    "aws-sdk": "^2.535.0",
+    "aws-sdk": "^2.556.0",
     "chalk": "^2.4.2",
     "columnify": "^1.5.4",
-    "commander": "^3.0.1",
+    "commander": "^3.0.2",
     "got": "^9.6.0",
     "xml2js": "^0.4.22"
   }
