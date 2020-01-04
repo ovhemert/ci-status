@@ -1,6 +1,6 @@
 'use strict'
 
-const got = require('got')
+const axios = require('axios')
 const xml2js = require('xml2js')
 
 function parseXml (xml) {
@@ -41,7 +41,7 @@ async function getXml (url, { auth }) {
   if (auth && auth.token) {
     options.headers.Authorization = `Token ${auth.token}`
   }
-  const xml = await got.get(url, options).then(res => res.body)
+  const xml = await axios.get(url, options).then(res => res.data)
   return xml
 }
 

@@ -6,7 +6,7 @@
   - https://www.appveyor.com/docs/api/projects-builds/#get-project-last-build
 */
 
-const got = require('got')
+const axios = require('axios')
 
 const { URL } = require('url')
 
@@ -38,7 +38,7 @@ async function getProjects ({ owner, repo }) {
   const service = 'appveyor'
 
   const url = new URL(`/api/projects/${owner}/${repo}`, 'https://ci.appveyor.com/')
-  const json = await got.get(url.href).then(res => res.body)
+  const json = await axios.get(url.href).then(res => res.data)
   const data = JSON.parse(json)
 
   const items = Array.isArray(data) ? data : [data]
