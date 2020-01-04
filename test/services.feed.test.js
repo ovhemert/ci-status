@@ -2,28 +2,30 @@
 
 const test = require('tap').test
 const sinon = require('sinon')
-const got = require('got')
+const axios = require('axios')
 
 const feed = require('../src/services/feed')
 
 test('throws on malformed xml', async t => {
   t.plan(1)
-  const sgot = sinon.stub(got, 'get').callsFake(async url => {
-    const body = '<Projects>yo</invalid>mama</Projects>'
-    return { body }
+  const saxios = sinon.stub(axios, 'get').callsFake(async url => {
+    const data = '<Projects>yo</invalid>mama</Projects>'
+    const res = { data }
+    return res
   })
   const url = 'https://some.ci-server.com/cc.xml'
   t.rejects(feed.getProjects(url, { owner: 'ovhemert' }))
-  sgot.restore()
+  saxios.restore()
 })
 
 test('handles xml without projects', async t => {
   t.plan(1)
-  const sgot = sinon.stub(got, 'get').callsFake(async url => {
-    const body = '<Projects />'
-    return { body }
+  const saxios = sinon.stub(axios, 'get').callsFake(async url => {
+    const data = '<Projects />'
+    const res = { data }
+    return res
   })
   const url = 'https://some.ci-server.com/cc.xml'
   t.resolves(feed.getProjects(url, { owner: 'ovhemert' }))
-  sgot.restore()
+  saxios.restore()
 })

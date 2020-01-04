@@ -3,30 +3,32 @@
 const test = require('tap').test
 const sinon = require('sinon')
 
-const got = require('got')
+const axios = require('axios')
 const samples = require('./samples')
 const jenkins = require('../src/services/jenkins')
 
 test('gets all projects', async t => {
   t.plan(1)
-  const sgot = sinon.stub(got, 'get').callsFake(async url => {
-    const body = `<Projects>\n${samples.PROJECTS_XML.join('\n')}\n</Projects>`
-    return { body }
+  const saxios = sinon.stub(axios, 'get').callsFake(async url => {
+    const data = `<Projects>\n${samples.PROJECTS_XML.join('\n')}\n</Projects>`
+    const res = { data }
+    return res
   })
   const projects = await jenkins.getProjects({ url: 'http://localhost:8080/', user: 'ovhemert', token: 'blablabla' })
-  sgot.restore()
+  saxios.restore()
   t.ok(projects.length > 0)
 })
 
 test('gets single project', async t => {
   t.plan(1)
 
-  const sgot = sinon.stub(got, 'get').callsFake(async url => {
-    const body = `<Projects>\n${samples.PROJECTS_XML.join('\n')}\n</Projects>`
-    return { body }
+  const saxios = sinon.stub(axios, 'get').callsFake(async url => {
+    const data = `<Projects>\n${samples.PROJECTS_XML.join('\n')}\n</Projects>`
+    const res = { data }
+    return res
   })
   const projects = await jenkins.getProjects({ url: 'http://localhost:8080/', user: 'ovhemert', token: 'blablabla', project: 'ci-status' })
-  sgot.restore()
+  saxios.restore()
 
   t.ok(projects.length > 0)
 })
