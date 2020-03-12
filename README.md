@@ -4,7 +4,6 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/39e011f864c94544bb2535a531c4dd68)](https://www.codacy.com/app/ovhemert/ci-status?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ovhemert/ci-status&amp;utm_campaign=Badge_Grade)
 [![Known Vulnerabilities](https://snyk.io/test/npm/ci-status/badge.svg)](https://snyk.io/test/npm/ci-status)
 [![Coverage Status](https://coveralls.io/repos/github/ovhemert/ci-status/badge.svg?branch=master)](https://coveralls.io/github/ovhemert/ci-status?branch=master)
-[![Greenkeeper badge](https://badges.greenkeeper.io/ovhemert/ci-status.svg)](https://greenkeeper.io/)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
 
 CI-Status displays the build status of projects on a continuous integration server in the console.
