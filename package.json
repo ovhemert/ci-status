@@ -28,12 +28,12 @@
   },
   "devDependencies": {
     "aws-sdk-mock": "^5.1.0",
-    "sinon": "^9.0.2",
+    "sinon": "^9.0.3",
     "standard": "^14.3.4",
     "tap": "^14.10.8"
   },
   "dependencies": {
-    "aws-sdk": "^2.722.0",
+    "aws-sdk": "^2.731.0",
     "axios": "^0.19.2",
     "chalk": "^4.1.0",
     "columnify": "^1.5.4",
