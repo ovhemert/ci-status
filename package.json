@@ -33,7 +33,7 @@
     "tap": "^14.10.8"
   },
   "dependencies": {
-    "aws-sdk": "^2.731.0",
+    "aws-sdk": "^2.732.0",
     "axios": "^0.19.2",
     "chalk": "^4.1.0",
     "columnify": "^1.5.4",
