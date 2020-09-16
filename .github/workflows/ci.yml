@@ -23,12 +23,6 @@ jobs:
         run: npm install
       - name: Run Tests
         run: npm test
-      - name: Coveralls
-        uses: coverallsapp/github-action@master
-        env:
-          COVERALLS_FLAG_NAME: run-${{ matrix.os }}-${{ matrix.node-version }}
-        with:
-          github-token: ${{ secrets.github_token }}
   finish:
     needs: build
     runs-on: ubuntu-latest
