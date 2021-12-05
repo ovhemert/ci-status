@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "axios": "^0.23.0",
-    "aws-sdk": "^2.1032.0",
+    "aws-sdk": "^2.1043.0",
     "chalk": "^4.1.2",
     "columnify": "^1.5.4",
     "commander": "^6.2.1",
