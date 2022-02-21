@@ -36,7 +36,7 @@
     "aws-sdk": "^2.1043.0",
     "axios": "^0.24.0",
     "chalk": "^5.0.0",
-    "columnify": "^1.5.4",
+    "columnify": "^1.6.0",
     "commander": "^6.2.1",
     "xml2js": "^0.4.23"
   }
