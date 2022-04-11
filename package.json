@@ -37,7 +37,7 @@
     "axios": "^0.26.1",
     "chalk": "^5.0.1",
     "columnify": "^1.6.0",
-    "commander": "^9.0.0",
+    "commander": "^9.1.0",
     "xml2js": "^0.4.23"
   }
 }
